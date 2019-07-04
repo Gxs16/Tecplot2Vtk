@@ -3,7 +3,7 @@ import numpy as np
 import os
 from pyevtk.hl import unstructuredGridToVTK
 from pyevtk.vtk import VtkHexahedron
-file = open("tec_test_0.3g.dat", "r")#Open file in read mode 
+file = open('./Data/tec_test_0.3g.dat','r')#Open file in read mode 
 lines = file.readlines()
 
 #The point data
@@ -165,4 +165,4 @@ Stress_6_temp = list(map(float ,stress_6_list))#Transfer string elements in list
 Stress_6 = np.array(Stress_6_temp)#Transfer a list to an array
 
 #Write all the data to a vtk file
-unstructuredGridToVTK("Ver_1.0", X, Y, Z, connectivity = Connect, offsets = offset, cell_types = ctype, cellData = {'equivalent_inelastic':Equi,'Principal_1':Prin_1,'Principal_2':Prin_2,'Principal_3':Prin_3,'Stress_1':Stress_1,'Stress_2':Stress_2,'Stress_3':Stress_3,'Stress_4':Stress_4,'Stress_5':Stress_5,'Stress_6':Stress_6}, pointData = {'Disp_1':Disp_1,'Disp_2':Disp_2,'Disp_3':Disp_3,'Residual_1':Residual_1,'Residual_2':Residual_2,'Residual_3':Residual_3})
+unstructuredGridToVTK("./Output/Ver_1.0", X, Y, Z, connectivity = Connect, offsets = offset, cell_types = ctype, cellData = {'equivalent_inelastic':Equi,'Principal_1':Prin_1,'Principal_2':Prin_2,'Principal_3':Prin_3,'Stress_1':Stress_1,'Stress_2':Stress_2,'Stress_3':Stress_3,'Stress_4':Stress_4,'Stress_5':Stress_5,'Stress_6':Stress_6}, pointData = {'Disp_1':Disp_1,'Disp_2':Disp_2,'Disp_3':Disp_3,'Residual_1':Residual_1,'Residual_2':Residual_2,'Residual_3':Residual_3})
