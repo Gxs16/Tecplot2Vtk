@@ -4,7 +4,7 @@
 
 Visualization Toolkit is a software system for computer visualization.
 
-There are two kinds of VTK formats. One is VTK legacy format, which can be edited as easily as txt file, the other is based on XML, which need us is to know more about XML format.
+There are two kinds of VTK formats. One is VTK legacy format, which can be edited as easily as txt file, the other is based on XML, which need us to know more about XML format.
 
 More detials can be found in *The VTK User’s Guide 11th Edition*  
 
